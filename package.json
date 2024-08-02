@@ -1,0 +1,31 @@
+{
+  "name": "cypress-parallel-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress-parallel run --node 1:1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.1",
+    "@badeball/cypress-parallel": "^2.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.2",
+    "args-parser": "^1.3.0",
+    "cypress": "^13.13.2",
+    "cypress-multi-reporters": "^1.6.4",
+    "cypress-on-fix": "^1.0.3",
+    "mochawesome": "^7.1.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": [
+      "tests/e2e/common/**/*.{js,ts}"
+    ],
+    "filterSpecs": true
+  }
+}
